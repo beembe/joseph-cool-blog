@@ -2,12 +2,23 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "yarn format && next build",
+    "start": "next start",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "verify": "yarn format:check && yarn lint"
   },
   "dependencies": {
     "next": "^16.3.5",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "eslint-config-next": "^16.3.8",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.9",
+    "typescript": "5.8.3"
   }
 }
